@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Wednesday Tech Meetings</title>
-  <meta name="description" content="This is what I learned last tech meeting">
+  <title>Wednesday Tech Meeting</title>
+  <meta name="description" content="1] Ruby encoding defaults to ASCII, which is an issue when importing files with non ASCII characters.">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="/wednesday/tech/2016/02/24/meeting.html">
@@ -49,12 +49,48 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Wednesday Tech Meetings</h1>
-    <p class="post-meta"><time datetime="2016-02-24T14:30:08-08:00" itemprop="datePublished">Feb 24, 2016</time></p>
+    <h1 class="post-title" itemprop="name headline">Wednesday Tech Meeting</h1>
+    <p class="post-meta">
+      <time datetime="2016-02-24T14:30:08-08:00" itemprop="datePublished">Feb 24, 2016</time>
+       •
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Steven Inouye</span>
+      </span>
+      
+    </p>
+    <p>
+     
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        Learnings:
+      </span>
+      
+    </p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>This is what I learned last tech meeting</p>
+    <p>1] Ruby encoding defaults to ASCII, which is an issue when importing files with non ASCII characters.</p>
+
+<ul>
+  <li>If you import a file which you do not know the encoding, you can use the <em>valid_encoding?</em> method which will return a boolean.</li>
+</ul>
+
+<p>2] To increase concurrent speed in Ruby it is better to increase processes rather than increase threads.</p>
+
+<ul>
+  <li>All Ruby threads are passed through a global lock, shoving more threads through the lock, will bottleneck quickly.</li>
+  <li>Creating more processes will produce more locks which shouldn’t have significant bottlenecks.</li>
+</ul>
+
+<p>3] Gmail tricks for signing up multiple accounts to a single email:</p>
+
+<ul>
+  <li>Gmail ignores periods, for @gmail accounts
+  mr.catnaps@gmail.com and mr.cat.naps@gmail.com will both work</li>
+  <li>Anything after a + sign is ignored, but recored in the ‘To’
+  mrcatnaps+subscription@gmail.com will go to mrcatnaps@gmail.com</li>
+  <li>Capitalization is ignored by Gmail for all accounts (business and personal)
+  mrCATnaps@gmail.com is the same as mrcatNAPS@gmail.com</li>
+</ul>
 
   </div>
 
