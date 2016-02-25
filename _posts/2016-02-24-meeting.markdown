@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "Wednesday Tech Meetings"
+date:   2016-02-24 14:30:08 -0800
+categories: wednesday tech
+---
+
+This is what I learned last tech meeting
