@@ -1,8 +1,22 @@
 ---
 layout: post
-title:  "Wednesday Tech Meetings"
+title:  "Wednesday Tech Meeting"
 date:   2016-02-24 14:30:08 -0800
 categories: wednesday tech
 ---
 
-This is what I learned last tech meeting
+Learnings:
+1] Ruby encoding defaults to ASCII, which is an issue when importing files with non ASCII characters.
+--If you import a file which you do not know the encoding, you can use the valid_encoding? which will return a boolean.
+
+2] To increase concurrent speed in Ruby it is better to increase processes rather than increase threads.
+--All Ruby threads are passed through a global lock, shoving more threads through the lock, will bottleneck quickly.
+--Creating more processes will produce more locks which shouldn't have significant bottlenecks.
+
+3] Gmail tricks for signing up multiple accounts to a single email:
+--Gmail ignores periods, for @gmail accounts
+==mr.catnaps@gmail.com and mr.cat.naps@gmail.com will both work
+--Anything after a + sign is ignored, but recored in the 'To'
+==mrcatnaps+subscription@gmail.com will go to mrcatnaps@gmail.com
+--Capitalization is ignored by Gmail for all accounts (business and personal)
+==mrCATnaps@gmail.com is the same as mrcatNAPS@gmail.com
