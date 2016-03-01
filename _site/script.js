@@ -48,14 +48,26 @@
 		// https://docs.google.com/spreadsheets/d/1xlOorpivOmFpEcWvCKn_rF9yRMGUNEB9JaIE4-ZUtAU/edit#gid=0
 		var url = 'https://spreadsheets.google.com/feeds/list/1xlOorpivOmFpEcWvCKn_rF9yRMGUNEB9JaIE4-ZUtAU/od6/public/values?alt=json'
 		var parse = function(entry) {
-		  console.log(entry);
-		  var category = entry['gsx$box']['$t'];
-		  var description = entry['gsx$calmg']['$t'];
-		  var title = entry['gsx$nutepercent']['$t'];
+		  // console.log(entry);
+		  var box = entry['gsx$box']['$t'];
+		  var calmg = entry['gsx$calmg']['$t'];
+		  var nutes = entry['gsx$nutepercent']['$t'];
+		  var date = entry['gsx$date']['$t'];
+		  var hourWater = entry['gsx$hourwatermilitary']['$t'];
+		  var waterGallon = entry['gsx$water12gallon']['$t'];
+		  var hoursLightOn = entry['gsx$hourslighton']['$t'];
+		  var extra = entry['gsx$extra']['$t'];
+		  var issues = entry['gsx$issues']['$t'];
 		  veep = {
-		    category: category,
-		    description: description,
-		    title: title,
+		    box: box,
+		    calmg: calmg,
+		    nutes: nutes,
+		    date: date,
+		    hourWater: hourWater,
+		    waterGallon: waterGallon,
+		    hoursLightOn: hoursLightOn,
+		    extra: extra,
+		    issues: issues,
 		    url: url
 		  };
 		  console.log(veep)
