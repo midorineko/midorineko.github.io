@@ -1,4 +1,4 @@
-	var app = angular.module('myApp', ['ngRoute']);
+	var app = angular.module('cannabisApp', ['ngRoute']);
 
 
 	app.config(function($routeProvider) {
@@ -12,9 +12,9 @@
 				templateUrl : 'pages/kasper.html',
 				controller  : 'kasperCtrl'
 			})
-		  .when('/contact', {
-				templateUrl : 'pages/contact.html',
-				controller  : 'contactCtrl'
+		  .when('/watering', {
+				templateUrl : 'pages/watering.html',
+				controller  : 'wateringCtrl'
 			})
 			.otherwise('/');
 	});
@@ -24,7 +24,7 @@
 	  $scope.menu = [
 	    {label:'Home', route:'/'},
 	    {label:'Kasper', route:'/kasper'},
-	    {label:'Contact', route:'/contact'}
+	    {label:'Contact', route:'/watering'}
 	   ]
 	  
 	  $scope.menuActive = '/';
@@ -32,9 +32,9 @@
 	  $rootScope.$on('$routeChangeSuccess', function(e, curr, prev) {
        $scope.menuActive = $location.path();
     });
-		
+
 	});
-	
+
 	app.controller('homeCtrl', function($scope) {
 		
 		$scope.message = 'Everyone come and see how good I look!';
@@ -44,6 +44,6 @@
 		$scope.message = 'I love Kasper the Ghostie! Soon he will be able to do all this too!';
 	});
 
-	app.controller('contactCtrl', function($scope) {
-		$scope.message = 'Contact us! JK. This is just a demo.';
+	app.controller('wateringCtrl', function($scope) {
+		$scope.message = 'This will contain a watering schedule.';
 	});
