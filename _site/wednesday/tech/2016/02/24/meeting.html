@@ -77,20 +77,23 @@
 <p>2] To increase concurrent speed in Ruby it is better to increase processes rather than increase threads.</p>
 
 <ul>
-  <li>All Ruby threads are passed through a global lock, shoving more threads through the lock, will bottleneck quickly.</li>
+  <li>All Ruby threads are passed through a global lock, shoving more threads through the lock will bottleneck quickly.</li>
   <li>Creating more processes will produce more locks which shouldn’t have significant bottlenecks.</li>
 </ul>
 
 <p>3] Gmail tricks for signing up multiple accounts to a single email:</p>
 
 <ul>
-  <li>Gmail ignores periods, for @gmail accounts
-  mr.catnaps@gmail.com and mr.cat.naps@gmail.com will both work</li>
-  <li>Anything after a + sign is ignored, but recored in the ‘To’
-  mrcatnaps+subscription@gmail.com will go to mrcatnaps@gmail.com</li>
-  <li>Capitalization is ignored by Gmail for all accounts (business and personal)
-  mrCATnaps@gmail.com is the same as mrcatNAPS@gmail.com</li>
+  <li>Gmail ignores periods, for @gmail accounts</li>
 </ul>
+
+<p>mr.catnaps@gmail.com and mr.cat.naps@gmail.com will both work
+ - Anything after a + sign is ignored, but recored in the ‘To’</p>
+
+<p>mrcatnaps+subscription@gmail.com will go to mrcatnaps@gmail.com
+ - Capitalization is ignored by Gmail for all accounts (business and personal)</p>
+
+<p>mrCATnaps@gmail.com is the same as mrcatNAPS@gmail.com</p>
 
   </div>
 
