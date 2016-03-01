@@ -6,13 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Mr. CatNaps Blog</title>
+    <title>Cannabis</title>
     <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://yourdomain.com/">
+    <link rel="canonical" href="http://yourdomain.com/cannabis/">
     <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="http://yourdomain.com/feed.xml">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js">
+
+    </script><script src="script.js"></script>
 </head>
 
 
@@ -22,7 +25,7 @@
 
     <div class="wrapper">
 
-        <a class="site-title" href="/">Mr. CatNaps Blog >^.^<</a>
+        <a class="site-title" href="/">Mr.CatNaps</a>
 
         <nav class="site-nav">
             <a href="#" class="menu-icon">
@@ -35,8 +38,11 @@
 
             <div class="trigger">
 
-                <a class="page-link" href="meow.html">Meow</a>
-                <a class="page-link" href="cannabis.html">Cannabis</a>
+
+                <a class="page-link" href="/cannabis/">Cannabis</a>
+
+
+
 
             </div>
         </nav>
@@ -48,35 +54,71 @@
 
 <div class="page-content">
     <div class="wrapper">
-        <div class="home">
+        <article class="post">
 
-            <h1 class="page-heading">Posts</h1>
+            <header class="post-header">
+                <h1 class="post-title">Into My Mind</h1>
+            </header>
 
-            <ul class="post-list">
 
-                <li>
-                    <span class="post-meta">Feb 25, 2016</span>
-                    <h2>
-                        <a class="post-link" href="/new/stuff/2016/02/25/new-stuff.html">New Stuff</a>
-                    </h2>
-                </li>
 
-                <li>
-                    <span class="post-meta">Feb 24, 2016</span>
-                    <h2>
-                        <a class="post-link" href="/jekyll/update/2016/02/24/welcome-to-jekyll.html">Welcome to Jekyll!</a>
-                        <a class="post-link" href="/wednesday/tech/2016/02/24/meeting.html">Wednesday Tech Meeting</a>
-                    </h2>
-                </li>
 
-            </ul>
 
-            <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
 
-        </div>
+
+
+
+
+
+
+
+            <body ng-controller="mainCtrl">
+
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/">Angular Routing Example</a>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li ng-repeat="item in menu" ng-class="{active: item.route == menuActive }"><a href="#{{item.route}}">{{item.label}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div id="main">
+
+                <div ng-view></div>
+
+            </div>
+
+            <footer class="text-center">
+                <p>View the tutorial on <a href="http://scotch.io/tutorials/javascript/single-page-apps-with-angularjs-routing-and-templating">Scotch.io</a>
+                </p>
+
+                <p>View a tutorial on <a href="http://scotch.io/tutorials/javascript/animating-angularjs-apps-ngview">Animating Your Angular Single Page App</a>
+                </p>
+            </footer>
+
+            </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </article>
 
     </div>
 </div>
+
 
 <footer class="site-footer">
 
