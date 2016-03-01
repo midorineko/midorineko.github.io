@@ -76,10 +76,10 @@
 		$http.get(url)
 		.success(function(response) {
 		  var entries = response['feed']['entry'];
-		  $scope.parsedEntries = [];
+		  $scope.parsedWateringSheet = [];
 		  for (var key in entries) {
 		    var content = entries[key];
-		    $scope.parsedEntries.push(parse(content));
+		    $scope.parsedWateringSheet.push(parse(content));
 		  }
 		});
 
