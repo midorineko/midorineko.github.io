@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 
 <head>
     <meta charset="utf-8">
@@ -13,9 +13,13 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="canonical" href="http://yourdomain.com/cannabis/">
     <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="http://yourdomain.com/feed.xml">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
 
-    </script><script src="script.js"></script>
+    <!-- SPELLS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.js"></script>
+    <script src="script.js"></script>
 </head>
 
 
@@ -57,23 +61,10 @@
         <article class="post">
 
             <header class="post-header">
-                <h1 class="post-title">Into My Mind</h1>
+                <h1 class="post-title">Cannabis in Angular</h1>
             </header>
 
-
-
-
-
-
-
-
-
-
-
-
-
-            <body ng-controller="mainCtrl">
-
+        <div ng-controller="mainCtrl">
             <nav class="navbar navbar-default">
                 <div class="container">
                     <div class="navbar-header">
@@ -91,28 +82,7 @@
                 <div ng-view></div>
 
             </div>
-
-            <footer class="text-center">
-                <p>View the tutorial on <a href="http://scotch.io/tutorials/javascript/single-page-apps-with-angularjs-routing-and-templating">Scotch.io</a>
-                </p>
-
-                <p>View a tutorial on <a href="http://scotch.io/tutorials/javascript/animating-angularjs-apps-ngview">Animating Your Angular Single Page App</a>
-                </p>
-            </footer>
-
-            </body>
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
 
         </article>
 
