@@ -60,6 +60,9 @@
 		               }
 
 		           }
+		       })
+		       .error(function(data, status) {
+		         console.error('Repos error', status, data);
 		       });
 	});
 
