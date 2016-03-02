@@ -455,3 +455,15 @@ pre {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+.fly {
+  color: pink !important; }
+
+.flex-box {
+  display: flex; }
+
+.watering-schedule p {
+  margin-left: 20px !important; }
+
+.extend {
+  flex-grow: 2 !important; }
