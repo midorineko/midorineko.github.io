@@ -55,14 +55,17 @@ $on-laptop:        800px;
   color: pink !important;
 }
 
-.flex-box{
-    display: flex;
+.watering-schedule{
+    padding-left: 15px !important;
 }
 
 .watering-schedule p {
-  margin-left: 20px !important;
+  text-align: center;
+  width: 10%;
+  /*margin-left: 60px !important;*/
+  float: left;
 }
 
 .extend{
-    flex-grow: 2 !important;
+    width: 20% !important;
 }

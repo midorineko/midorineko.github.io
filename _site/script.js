@@ -59,10 +59,10 @@
 		  var extra = entry['gsx$extra']['$t'];
 		  var issues = entry['gsx$issues']['$t'];
 		    if (nutes != 'none'){
-		  	nutes = eval(nutes).join(",")
+		  	nutes = eval(nutes).join(", ")
 		  }
 		  if (extra != 'none'){
-		  	extra = eval(extra).join(",")
+		  	extra = eval(extra).join(", ")
 		  }
 		  veep = {
 		    box: box,
