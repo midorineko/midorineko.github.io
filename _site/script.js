@@ -43,15 +43,20 @@
 	app.controller('kasperCtrl', function($scope, $http) {
 
 		$scope.message = 'I love Kasper the Ghostie! Soon he will be able to do all this too!';
+		$scope.image_array = [];
 		   $http.get('cannabis_pics/')
 		       .success(function(data, status, headers, config) {
 		           if (data && status === 200) {
 		               var can_regex = /<A HREF="(.*?)"/g;
 		               var res = data.match(can_regex);
 		               for (var i = 0; i < res.length; i++) { 
-		                   var href_names = res[i]
-		                   href_names = href_names.match(/"([^"]+)"/)[1];
-		                   console.log(href_names)
+		                   var href_name = res[i]
+		                   href_name = href_name.match(/"([^"]+)"/)[1];
+		                   var last_three = href_name.slice(-4);
+		                   var img_tags = ['.jpg', '.JPG', '.png' ,'.PNG' ,'jpeg' ,'JPEG', '.bmp', '.BMP', '.gif', '.GIF']
+		                   if (img_tags.indexOf(last_three) >= 0){
+		                   	 $scope.image_array.push(href_name);
+		                   }
 		               }
 
 		           }
