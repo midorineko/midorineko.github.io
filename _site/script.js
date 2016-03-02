@@ -58,7 +58,7 @@
 		  var hoursLightOn = entry['gsx$hourslighton']['$t'];
 		  var extra = entry['gsx$extra']['$t'];
 		  var issues = entry['gsx$issues']['$t'];
-		  if (nutes != 'none'){
+		    if (nutes != 'none'){
 		  	nutes = eval(nutes).join(",")
 		  }
 		  if (extra != 'none'){
