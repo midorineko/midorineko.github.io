@@ -40,8 +40,22 @@
 		$scope.message = 'Everyone come and see how good I look!';
 	});
 
-	app.controller('kasperCtrl', function($scope) {
+	app.controller('kasperCtrl', function($scope, $http) {
+
 		$scope.message = 'I love Kasper the Ghostie! Soon he will be able to do all this too!';
+		   $http.get('cannabis_pics/')
+		       .success(function(data, status, headers, config) {
+		           if (data && status === 200) {
+		               var can_regex = /<A HREF="(.*?)"/g;
+		               var res = data.match(can_regex);
+		               for (var i = 0; i < res.length; i++) { 
+		                   var href_names = res[i]
+		                   href_names = href_names.match(/"([^"]+)"/)[1];
+		                   console.log(href_names)
+		               }
+
+		           }
+		       });
 	});
 
 	app.controller('wateringCtrl', function($scope, $http) {
