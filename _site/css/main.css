@@ -460,7 +460,7 @@ pre {
   color: pink !important; }
 
 .watering-schedule {
-  padding-left: 15px !important; }
+  /*padding-left: 15px !important;*/ }
 
 .watering-schedule p {
   text-align: center;
@@ -468,5 +468,14 @@ pre {
   /*margin-left: 60px !important;*/
   float: left; }
 
-.extend {
-  width: 20% !important; }
+.watering-schedule .nums {
+  width: 7% !important; }
+
+.extra {
+  width: 15% !important; }
+
+.issues {
+  width: 15% !important; }
+
+.nute {
+  width: 17% !important; }

@@ -56,7 +56,7 @@ $on-laptop:        800px;
 }
 
 .watering-schedule{
-    padding-left: 15px !important;
+    /*padding-left: 15px !important;*/
 }
 
 .watering-schedule p {
@@ -66,6 +66,18 @@ $on-laptop:        800px;
   float: left;
 }
 
-.extend{
-    width: 20% !important;
+.watering-schedule .nums{
+    width: 7% !important;
+}
+
+.extra{
+    width: 15% !important;
+}
+
+.issues{
+    width: 15% !important;
+}
+
+.nute{
+    width: 17% !important;
 }

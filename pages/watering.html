@@ -2,19 +2,29 @@
 	<h1>Watering Page</h1>
 
 	<p>{{ message }}</p>
-<!--       <div ng-repeat="day in parsedWateringSheet">
-         <p>{{day.date}}</p>
-      </div> -->
-      <div class="row flex-box watering-schedule" ng-repeat="day in parsedWateringSheet">
+
+      <div class="row watering-schedule">
+        <p>Date</p>
+        <p class="nums">Hour (Military)</p>
+        <p class="nums">Amt. 1/2 Gallon</p>
+        <p class="nums">Light On (Hours)</p>
+        <p>Box/Tent</p>
+        <p class="nute">Nutes</p>
+        <p>CalMg</p>
+        <p class="extra">Extras</p>
+        <p class="issues">issues</p>
+      </div>
+
+      <div class="row watering-schedule" ng-repeat="day in parsedWateringSheet">
         <p>{{day.date}}</p>
-        <p>{{day.hourWater}}</p>
-        <p>{{day.waterGallon}}</p>
-        <p>{{day.hoursLightOn}}</p>
+        <p class="nums">{{day.hourWater}}</p>
+        <p class="nums">{{day.waterGallon}}</p>
+        <p class="nums">{{day.hoursLightOn}}</p>
         <p>{{day.box}}</p>
-        <p class="extend">{{day.nutes}}</p>
+        <p class="nute">{{day.nutes}}</p>
         <p>{{day.calmg}}</p>
-        <p class="extend">{{day.extra}}</p>
-        <p>{{day.issues}}</p>
+        <p class="extra">{{day.extra}}</p>
+        <p class="issues">{{day.issues}}</p>
       </div>
 </div>
 
