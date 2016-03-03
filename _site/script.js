@@ -44,7 +44,7 @@
 
 		$scope.message = 'I love Kasper the Ghostie! Soon he will be able to do all this too!';
 		$scope.image_array = [];
-		   $http.get('/assets/cannabis_pics')
+		   $http.get('/assets')
 		       .success(function(data, status, headers, config) {
 		           if (data && status === 200) {
 		               var can_regex = /<A HREF="(.*?)"/g;
