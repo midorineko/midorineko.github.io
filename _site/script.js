@@ -43,28 +43,46 @@
 	app.controller('kasperCtrl', function($scope, $http) {
 
 		$scope.message = 'I love Kasper the Ghostie! Soon he will be able to do all this too!';
+		$scope.getNumber = function(num) {
+		    return new Array(num);   
+		}
 		$scope.image_array = [];
-		   $http.get('/assets/images')
-		       .success(function(data, status, headers, config) {
-		           if (data && status === 200) {
-		               var can_regex = /<A HREF="(.*?)"/g;
-		               var res = data.match(can_regex);
-		               for (var i = 0; i < res.length; i++) { 
-		                   var href_name = res[i]
-		                   href_name = href_name.match(/"([^"]+)"/)[1];
-		                   var last_three = href_name.slice(-4);
-		                   var img_tags = ['.jpg', '.JPG', '.png' ,'.PNG' ,'jpeg' ,'JPEG', '.bmp', '.BMP', '.gif', '.GIF']
-		                   if (img_tags.indexOf(last_three) >= 0){
-		                   	 $scope.image_array.push(href_name);
-		                   }
-		               }
+		   // $http.get('http://mrcatnaps.imgur.com/')
+		   //     .success(function(data, status, headers, config) {
+		   //         if (data && status === 200) {
+		   //             var can_regex = /<A HREF="(.*?)"/g;
+		   //             var res = data.match(can_regex);
+		   //             for (var i = 0; i < res.length; i++) { 
+		   //                 var href_name = res[i]
+		   //                 href_name = href_name.match(/"([^"]+)"/)[1];
+		   //                 var last_three = href_name.slice(-4);
+		   //                 var img_tags = ['.jpg', '.JPG', '.png' ,'.PNG' ,'jpeg' ,'JPEG', '.bmp', '.BMP', '.gif', '.GIF']
+		   //                 if (img_tags.indexOf(last_three) >= 0){
+		   //                 	 $scope.image_array.push(href_name);
+		   //                 }
+		   //             }
 
-		           }
-		       })
-		       .error(function(data, status) {
-		         console.error('Repos error', status, data);
-		       });
+		   //         }
+		   //     })
+		   //     .error(function(data, status) {
+		   //       console.error('Repos error', status, data);
+		   //     });
 	});
+
+
+	app.directive('onErrorSrc', function() {
+	    return {
+	        link: function(scope, element, attrs) {
+	          element.bind('error', function() {
+	            if (attrs.src != attrs.onErrorSrc) {
+	            	element.addClass("hiddenClass");
+	              attrs.$set('src', attrs.onErrorSrc);
+	            }
+	          });
+	        }
+	    }
+	});
+
 
 	app.controller('wateringCtrl', function($scope, $http) {
 		// https://docs.google.com/spreadsheets/d/1xlOorpivOmFpEcWvCKn_rF9yRMGUNEB9JaIE4-ZUtAU/edit#gid=0

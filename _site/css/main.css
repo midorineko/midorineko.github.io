@@ -479,3 +479,9 @@ pre {
 
 .nute {
   width: 17% !important; }
+
+.hiddenClass {
+  display: none; }
+
+.showClass {
+  display: block; }

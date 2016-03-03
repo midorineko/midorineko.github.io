@@ -3,10 +3,8 @@
 	
 	<div id='fileNames'> </div>
 	<p>{{ message }}</p>
-	<p>{{ image_array }}</p>
 
-	<div ng-repeat="image in image_array">
-		<img src="../assets/images/{{image}}">
+	<div ng-repeat="i in getNumber(100) track by $index">
+		<img ng-src="cannabis_pics/{{$index+1}}.JPG" on-error-src="http://google.com/favicon.ico">
 	</div>
-	<img src="../assets/images/growl.JPG">
 </div>
