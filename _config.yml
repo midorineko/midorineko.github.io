@@ -1,7 +1,1 @@
-gems:
-  - jekyll-assets
-
-assets:
-  compress:
-    css: true
-     # js: true
+include: [cannabis_pics]

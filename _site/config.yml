@@ -1,7 +1,0 @@
-gems:
-  - jekyll-assets
-
-assets:
-  compress:
-    css: true
-     # js: true
