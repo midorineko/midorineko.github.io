@@ -483,5 +483,6 @@ pre {
 .hiddenClass {
   display: none; }
 
-.showClass {
-  display: block; }
+.canna-pic {
+  width: 380px;
+  float: left; }
