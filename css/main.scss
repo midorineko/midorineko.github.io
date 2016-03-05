@@ -89,6 +89,14 @@ $on-laptop:        800px;
   display: block;
 }
 
+.canna-pic:active{
+  width: 60%;
+  height: 90%;
+  position:fixed;
+  bottom: 100px;
+  z-index: 99;
+}
+
 .hiddenClass{
   display: none;
 }
