@@ -487,11 +487,19 @@ pre {
   display: block; }
 
 .canna-pic:active {
-  width: 60%;
+  width: 1140px;
   height: 90%;
   position: fixed;
   bottom: 20px;
   z-index: 99; }
+  @media (max-width: 1000px) {
+    .canna-pic:active {
+      width: 720px;
+      height: 70%; } }
+  @media (max-width: 700px) {
+    .canna-pic:active {
+      width: 480px;
+      height: 50%; } }
 
 .navbar {
   z-index: 98 !important; }
