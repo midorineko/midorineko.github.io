@@ -42,7 +42,7 @@
 
 	app.controller('kasperCtrl', function($scope, $http) {
 
-		$scope.message = 'I love Kasper the Ghostie! Soon he will be able to do all this too!';
+		$scope.message = 'Click and hold to access larger image! Mrow...';
 		$scope.getNumber = function(num) {
 		    return new Array(num);   
 		}

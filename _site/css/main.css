@@ -494,7 +494,7 @@ pre {
   z-index: 99; }
 
 .navbar {
-  z-index: -1 !important; }
+  z-index: 98 !important; }
 
 .hiddenClass {
   display: none; }
