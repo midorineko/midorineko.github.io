@@ -47,7 +47,7 @@
 		    return new Array(num);   
 		}
 		$scope.image_array = [];
-		   $http.get('http://github.com/midorineko/midorineko.github.io/tree/master/cannabis_pics')
+		   $http.get('http://cors.io/?u=http://github.com/midorineko/midorineko.github.io/tree/master/cannabis_pics')
 		       .success(function(data, status, headers, config) {
 		           if (data && status === 200) {
 		               var can_regex = /<A HREF="(.*?)"/g;
