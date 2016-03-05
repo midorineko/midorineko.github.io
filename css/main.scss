@@ -82,11 +82,13 @@ $on-laptop:        800px;
     width: 17% !important;
 }
 
-.hiddenClass{
-  display: none;
-}
-
 .canna-pic{
   width: 380px;
+  height: 300px;
   float: left;
+  display: block;
+}
+
+.hiddenClass{
+  display: none;
 }
