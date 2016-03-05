@@ -93,9 +93,13 @@ $on-laptop:        800px;
   width: 60%;
   height: 90%;
   position:fixed;
-  bottom: 100px;
+  bottom: 20px;
   z-index: 99;
 }
+
+.navbar{
+     z-index: -1 !important;
+  }
 
 .hiddenClass{
   display: none;
