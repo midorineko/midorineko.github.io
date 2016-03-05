@@ -47,26 +47,26 @@
 		    return new Array(num);   
 		}
 		$scope.image_array = [];
-		   // $http.get('http://mrcatnaps.imgur.com/')
-		   //     .success(function(data, status, headers, config) {
-		   //         if (data && status === 200) {
-		   //             var can_regex = /<A HREF="(.*?)"/g;
-		   //             var res = data.match(can_regex);
-		   //             for (var i = 0; i < res.length; i++) { 
-		   //                 var href_name = res[i]
-		   //                 href_name = href_name.match(/"([^"]+)"/)[1];
-		   //                 var last_three = href_name.slice(-4);
-		   //                 var img_tags = ['.jpg', '.JPG', '.png' ,'.PNG' ,'jpeg' ,'JPEG', '.bmp', '.BMP', '.gif', '.GIF']
-		   //                 if (img_tags.indexOf(last_three) >= 0){
-		   //                 	 $scope.image_array.push(href_name);
-		   //                 }
-		   //             }
+		   $http.get('https://github.com/midorineko/midorineko.github.io/tree/master/cannabis_pics')
+		       .success(function(data, status, headers, config) {
+		           if (data && status === 200) {
+		               var can_regex = /<A HREF="(.*?)"/g;
+		               var res = data.match(can_regex);
+		               for (var i = 0; i < res.length; i++) { 
+		                   var href_name = res[i]
+		                   href_name = href_name.match(/"([^"]+)"/)[1];
+		                   var last_three = href_name.slice(-4);
+		                   var img_tags = ['.jpg', '.JPG', '.png' ,'.PNG' ,'jpeg' ,'JPEG', '.bmp', '.BMP', '.gif', '.GIF']
+		                   if (img_tags.indexOf(last_three) >= 0){
+		                   	 $scope.image_array.push(href_name);
+		                   }
+		               }
 
-		   //         }
-		   //     })
-		   //     .error(function(data, status) {
-		   //       console.error('Repos error', status, data);
-		   //     });
+		           }
+		       })
+		       .error(function(data, status) {
+		         console.error('Repos error', status, data);
+		       });
 	});
 
 

@@ -1,1 +1,2 @@
-include: [cannabis_pics]
+include: [/cannabis_pics]
+keep_files: [/cannabis_pics]
