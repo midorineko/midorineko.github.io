@@ -50,7 +50,7 @@
 		   $http.get('http://cors.io/?u=http://github.com/midorineko/midorineko.github.io/tree/master/cannabis_pics')
 		       .success(function(data, status, headers, config) {
 		           if (data && status === 200) {
-		               var can_regex = /<A HREF="(.*?)"/g;
+		               var can_regex = /<a href="(.*?)"/g;
 		               var res = data.match(can_regex);
 		               for (var i = 0; i < res.length; i++) { 
 		                   var href_name = res[i]
@@ -58,6 +58,8 @@
 		                   var last_three = href_name.slice(-4);
 		                   var img_tags = ['.jpg', '.JPG', '.png' ,'.PNG' ,'jpeg' ,'JPEG', '.bmp', '.BMP', '.gif', '.GIF']
 		                   if (img_tags.indexOf(last_three) >= 0){
+		                   	href_name = /[^/]*$/.exec(href_name)[0];
+		                   	console.log(href_name)
 		                   	 $scope.image_array.push(href_name);
 		                   }
 		               }
