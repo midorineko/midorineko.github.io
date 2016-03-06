@@ -54,12 +54,11 @@
 		               var res = data.match(can_regex);
 		               for (var i = 0; i < res.length; i++) { 
 		                   var href_name = res[i]
-		                   href_name = href_name.match(/"([^"]+)"/)[1];
+		                   href_name = href_name.match(/"([^"]+)"/)[1]; //have to add if statementfor doesn't exist
 		                   var last_three = href_name.slice(-4);
 		                   var img_tags = ['.jpg', '.JPG', '.png' ,'.PNG' ,'jpeg' ,'JPEG', '.bmp', '.BMP', '.gif', '.GIF']
 		                   if (img_tags.indexOf(last_three) >= 0){
 		                   	href_name = /[^/]*$/.exec(href_name)[0];
-		                   	console.log(href_name)
 		                   	 $scope.image_array.push(href_name);
 		                   }
 		               }
