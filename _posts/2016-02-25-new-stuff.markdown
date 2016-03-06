@@ -1,8 +1,0 @@
----
-layout: post
-title:  Different Date
-date:   2016-02-25
-categories: new stuff
----
-
-being alone with you

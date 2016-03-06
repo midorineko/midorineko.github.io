@@ -76,7 +76,7 @@
 
 <p>It is generally caused by an ajax request calling an endpoint outside of your domain. I ran into this error because I tried to immediately display images that are saved in my github folder. Basically I needed to get the names of the files inside a directory not included in my Jekyll blog. Then use the names to populate a HTML page with a simple ng-repeate in angular. It is unfortuate when hosting your github pages, accessing directories in the same github through $http requests are considered cross origin domain searches.</p>
 
-<p>The work around is generally to allow cross origin resources accross the board or for specific domains. However, I simply wanted the sourcecode for a directory I am hosting. I used a simple fix by prefacing my url with…</p>
+<p>The work around is generally to allow cross origin resources accross the board or for specific domains. However, I only wanted the sourcecode for a directory I am hosting. I used the simple fix by prefacing my url with…</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">cors</span><span class="p">.</span><span class="nf">io</span><span class="o">/</span><span class="sc">?u</span><span class="o">=</span><span class="n">http</span><span class="ss">:/</span><span class="o">/</span></code></pre></figure>
 

@@ -51,8 +51,21 @@ $on-laptop:        800px;
         "layout",
         "syntax-highlighting"
 ;
+
+a{
+  color: #5627CF;
+}
+
+a:visited {
+    color: #5627CF;
+}
+
 .fly{
   color: pink !important;
+}
+
+.canna_green{
+  color: #84905E !important;
 }
 
 .watering-schedule{
