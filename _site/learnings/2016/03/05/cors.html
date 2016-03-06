@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>CORs: Cross Origin Resource Sharing</title>
+  <meta name="description" content="Definition: ‘Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources (e.g. fonts) on a web page to be requested from another dom...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="/learnings/2016/03/05/cors.html">
+  <link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/"></a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">CORs: Cross Origin Resource Sharing</h1>
+    <p class="post-meta">
+      <time datetime="2016-03-05T00:00:00-08:00" itemprop="datePublished">Mar 5, 2016</time>
+       •
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Steven Inouye</span>
+      </span>
+      
+    </p>
+    <p>
+     
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        A fundamental piece of web programming:
+      </span>
+      
+    </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Definition: ‘Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources (e.g. fonts) on a web page to be requested from another domain outside the domain from which the resource originated.’ -Wikipedia</p>
+
+<p>If you have programmed on the web there is a very good chance you have run into this error…</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">XMLHttpRequest</span> <span class="n">cannot</span> <span class="nb">load</span> <span class="n">some_url</span><span class="o">.</span> <span class="no">No</span> <span class="s1">'Access-Control-Allow-Origin'</span> <span class="n">header</span> <span class="n">is</span> <span class="n">present</span> <span class="n">on</span> <span class="n">the</span> <span class="n">requested</span> <span class="n">resource</span><span class="o">.</span> <span class="no">Origin</span> <span class="s1">'null'</span> <span class="n">is</span> <span class="n">therefore</span> <span class="n">not</span> <span class="n">allowed</span> <span class="n">access</span><span class="o">.</span></code></pre></figure>
+
+<p>It is generally caused by an ajax request calling an endpoint outside of your domain. I ran into this error because I tried to immediately display images that are saved in my github folder. Basically I needed to get the names of the files inside a directory not included in my Jekyll blog. Then use the names to populate a HTML page with a simple ng-repeate in angular. It is unfortuate when hosting your github pages, accessing directories in the same github through $http requests are considered cross origin domain searches.</p>
+
+<p>The work around is generally to allow cross origin resources accross the board or for specific domains. However, I simply wanted the sourcecode for a directory I am hosting. I used a simple fix by prefacing my url with…</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">cors</span><span class="p">.</span><span class="nf">io</span><span class="o">/</span><span class="sc">?u</span><span class="o">=</span><span class="n">http</span><span class="ss">:/</span><span class="o">/</span></code></pre></figure>
+
+<p>This allowed me to get the sourcecode from my directory and parse it for the image tags. Inside the <a href="/cannabis#/kasper">cannabis</a> section you can see it in action.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading"></h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li></li>
+          <li><a href="mailto:"></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
