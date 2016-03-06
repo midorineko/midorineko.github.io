@@ -59,7 +59,6 @@
 		                   var img_tags = ['.jpg', '.JPG', '.png' ,'.PNG' ,'jpeg' ,'JPEG', '.bmp', '.BMP', '.gif', '.GIF']
 		                   if (img_tags.indexOf(last_three) >= 0){
 		                   	href_name = /[^/]*$/.exec(href_name)[0];
-		                   	console.log(href_name)
 		                   	 $scope.image_array.push(href_name);
 		                   }
 		               }
