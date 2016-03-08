@@ -44,15 +44,15 @@
 
 		$scope.message = 'Click and hold to access larger image! Mrow...';
 		$scope.getNumber = function(num) {
-		    return new Array(num);   
+		    return new Array(num);
 		}
 		$scope.image_array = [];
-		   $http.get('http://cors.io/?u=http://github.com/midorineko/midorineko.github.io/tree/master/cannabis_pics')
+		   $http.get('http://github.com/midorineko/midorineko.github.io/tree/master/cannabis_pics')
 		       .success(function(data, status, headers, config) {
 		           if (data && status === 200) {
 		               var can_regex = /<a href="(.*?)"/g;
 		               var res = data.match(can_regex);
-		               for (var i = 0; i < res.length; i++) { 
+		               for (var i = 0; i < res.length; i++) {
 		                   var href_name = res[i]
 		                   href_name = href_name.match(/"([^"]+)"/)[1]; //have to add if statementfor doesn't exist
 		                   var last_three = href_name.slice(-4);
