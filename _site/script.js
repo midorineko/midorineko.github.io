@@ -47,22 +47,12 @@
 		    return new Array(num);
 		}
 		$scope.image_array = [];
-		   $http.get('http://github.com/midorineko/midorineko.github.io/tree/master/cannabis_pics')
+		   $http.get('https://api.github.com/repos/midorineko/midorineko.github.io/contents/cannabis_pics?ref=master')
 		       .success(function(data, status, headers, config) {
 		           if (data && status === 200) {
-		               var can_regex = /<a href="(.*?)"/g;
-		               var res = data.match(can_regex);
-		               for (var i = 0; i < res.length; i++) {
-		                   var href_name = res[i]
-		                   href_name = href_name.match(/"([^"]+)"/)[1]; //have to add if statementfor doesn't exist
-		                   var last_three = href_name.slice(-4);
-		                   var img_tags = ['.jpg', '.JPG', '.png' ,'.PNG' ,'jpeg' ,'JPEG', '.bmp', '.BMP', '.gif', '.GIF']
-		                   if (img_tags.indexOf(last_three) >= 0){
-		                   	href_name = /[^/]*$/.exec(href_name)[0];
-		                   	 $scope.image_array.push(href_name);
-		                   }
-		               }
-
+					$scope.image_array = data.map(function(obj){
+ 						return obj["name"];
+					});
 		           }
 		       })
 		       .error(function(data, status) {
