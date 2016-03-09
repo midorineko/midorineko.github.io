@@ -489,6 +489,9 @@ a:visited {
 .nute {
   width: 17% !important; }
 
+#photos {
+  width: 100%; }
+
 .canna-pic {
   width: 380px;
   height: 300px;
@@ -496,20 +499,21 @@ a:visited {
   display: block; }
 
 .canna-pic:focus {
-  width: 1140px;
-  height: auto;
+  width: auto;
+  height: 700px;
   max-height: 1200px;
   position: fixed;
   bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: auto;
   z-index: 99; }
   @media (max-width: 1000px) {
     .canna-pic:focus {
-      width: 720px;
-      height: 70%; } }
+      height: 550px; } }
   @media (max-width: 700px) {
     .canna-pic:focus {
-      width: 480px;
-      height: 50%; } }
+      height: 400px; } }
 
 .navbar {
   z-index: 98 !important; }
