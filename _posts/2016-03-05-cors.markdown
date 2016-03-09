@@ -21,3 +21,4 @@ The work around is generally to allow cross origin resources accross the board o
 http://cors.io/?u=http://
 {% endhighlight %}
 This allowed me to get the sourcecode from my directory and parse it for the image tags. Inside the <a href="/cannabis#/kasper">cannabis</a> section you can see it in action.
+Now Depricated. Currently used <a href="/learnings/2016/03/08/github-api.html">github API</a>.
