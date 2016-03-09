@@ -42,7 +42,7 @@
 
 	app.controller('kasperCtrl', function($scope, $http) {
 
-		$scope.message = 'Click and hold to access larger image! Mrow...';
+		$scope.message = 'Click to access larger image. Tab to go through them! Mrow...';
 		$scope.getNumber = function(num) {
 		    return new Array(num);
 		}
