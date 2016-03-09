@@ -14,7 +14,7 @@ If you have programmed on the web there is a very good chance you have run into 
 XMLHttpRequest cannot load some_url. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'null' is therefore not allowed access.
 {% endhighlight %}
 
-It is generally caused by an ajax request calling an endpoint outside of your domain. I ran into this error because I tried to immediately display images that are saved in my github folder. Basically I needed to get the names of the files inside a directory not included in my Jekyll blog. Then use the names to populate a HTML page with a simple ng-repeate in angular. It is unfortuate when hosting your github pages, accessing directories in the same github through $http requests are considered cross origin domain searches. 
+It is generally caused by an ajax request calling an endpoint outside of your domain. I ran into this error because I tried to immediately display images that are saved in my github folder. Basically I needed to get the names of the files inside a directory not included in my Jekyll blog. Then use the names to populate a HTML page with a simple ng-repeate in angular. It is unfortuate when hosting your github pages, accessing directories in the same github through $http requests are considered cross origin domain searches.
 
 The work around is generally to allow cross origin resources accross the board or for specific domains. However, I only wanted the sourcecode for a directory I am hosting. I used the simple fix by prefacing my url with...
 {% highlight ruby %}
