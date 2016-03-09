@@ -4,7 +4,7 @@
 	<div id='fileNames'> </div>
 	<p>{{ message }}</p>
 
-	<div ng-repeat="image in image_array" id="photos">
+	<div ng-repeat="image in image_array track by image" id="photos">
 		<img class="canna-pic" ng-src="cannabis_pics/{{image}}" on-error-src="http://google.com/favicon.ico">
 	</div>
 </div>
