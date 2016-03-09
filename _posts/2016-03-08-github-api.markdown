@@ -23,4 +23,4 @@ This call gave me all the files in the repository.
 
 Using a $http get call on the above url I was given an array of objects. Each object had a "name" attribute which held the name of the file. I attempted the same request with JSONP, but was rejected.
 
-I now have all the pictures displaying through a correct github api call. However it is fairly slow. I will optimize the images and index the ng-repeat. Hopefully this will give me the desired performance.
+I now have all the pictures displaying through a correct github api call. However it is fairly slow. I will optimize the images and index the ng-repeat. Hopefully this will give me the desired performance. check out the performance increase in the <a href="/cannabis#/kasper">cannabis</a> section.
