@@ -23,7 +23,7 @@
 
 	  $scope.menu = [
 	    {label:'Home', route:'/'},
-	    {label:'Kasper', route:'/kasper'},
+	    {label:'Gallery', route:'/kasper'},
 	    {label:'Watering', route:'/watering'}
 	   ]
 
@@ -37,8 +37,9 @@
 
 	app.controller('homeCtrl', function($scope) {
 
-		$scope.message = 'Everyone come and see how good I look!';
+		$scope.message = 'Mr. CatNaps loves cannabis!';
 	});
+
 
 	app.controller('kasperCtrl', function($scope, $http) {
 
@@ -119,9 +120,6 @@
 		    $scope.parsedWateringSheet.push(parse(content));
 		  }
 		});
-
-
-
 
 		$scope.message = 'This will contain a watering schedule.';
 	});
