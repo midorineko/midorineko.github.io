@@ -12,6 +12,10 @@
 				templateUrl : 'pages/kasper.html',
 				controller  : 'kasperCtrl'
 			})
+			.when('/blackjackBubbakush', {
+				templateUrl : 'pages/blackjackBubbakush.html',
+				controller  : 'blackjackBubbakushCtrl'
+			})
 		  .when('/watering', {
 				templateUrl : 'pages/watering.html',
 				controller  : 'wateringCtrl'
@@ -24,6 +28,7 @@
 	  $scope.menu = [
 	    {label:'Home', route:'/'},
 	    {label:'Gallery', route:'/kasper'},
+	    {label:'Black Jack Bubba Kush', route:'/blackjackBubbakush'},
 	    {label:'Watering', route:'/watering'}
 	   ]
 
@@ -49,6 +54,26 @@
 		}
 		$scope.image_array = [];
 		   $http.get('https://api.github.com/repos/midorineko/midorineko.github.io/contents/cannabis_pics?ref=master')
+		       .success(function(data, status, headers, config) {
+		           if (data && status === 200) {
+					$scope.image_array = data.map(function(obj){
+ 						return obj["name"];
+					});
+		           }
+		       })
+		       .error(function(data, status) {
+		         console.error('Repos error', status, data);
+		       });
+	});
+
+	app.controller('blackjackBubbakushCtrl', function($scope, $http) {
+
+		$scope.message = 'Click to access larger image. Tab to go through them! Mrow...';
+		$scope.getNumber = function(num) {
+		    return new Array(num);
+		}
+		$scope.image_array = [];
+		   $http.get('https://api.github.com/repos/midorineko/midorineko.github.io/contents/cannabis_pics/blackjack_bubbakush?ref=master')
 		       .success(function(data, status, headers, config) {
 		           if (data && status === 200) {
 					$scope.image_array = data.map(function(obj){
