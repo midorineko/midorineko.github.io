@@ -77,8 +77,10 @@
 		       .success(function(data, status, headers, config) {
 		           if (data && status === 200) {
 					$scope.image_array = data.map(function(obj){
- 						return obj["name"];
+ 						return parseInt(obj["name"]);
 					});
+					$scope.image_array.sort(function(a,b){return a - b}).reverse();
+					console.log($scope.image_array);
 		           }
 		       })
 		       .error(function(data, status) {
