@@ -8,9 +8,9 @@
 				templateUrl : 'pages/home.html',
 				controller  : 'homeCtrl'
 			})
-			.when('/kasper', {
-				templateUrl : 'pages/kasper.html',
-				controller  : 'kasperCtrl'
+			.when('/sherbetgelato', {
+				templateUrl : 'pages/sherbetgelato.html',
+				controller  : 'sherbetgelatoCtrl'
 			})
 			.when('/blackjackBubbakush', {
 				templateUrl : 'pages/blackjackBubbakush.html',
@@ -27,8 +27,8 @@
 
 	  $scope.menu = [
 	    {label:'Home', route:'/'},
-	    {label:'Gallery', route:'/kasper'},
-	    {label:'Black Jack Bubba Kush', route:'/blackjackBubbakush'},
+	    {label:'Sherbet & Gelato', route:'/sherbetgelato'},
+	    {label:'Black Jack & Bubba Kush', route:'/blackjackBubbakush'},
 	    {label:'Watering', route:'/watering'}
 	   ]
 
@@ -46,14 +46,14 @@
 	});
 
 
-	app.controller('kasperCtrl', function($scope, $http) {
+	app.controller('sherbetgelatoCtrl', function($scope, $http) {
 
 		$scope.message = 'Click to access larger image. Tab to go through them! Mrow...';
 		$scope.getNumber = function(num) {
 		    return new Array(num);
 		}
 		$scope.image_array = [];
-		   $http.get('https://api.github.com/repos/midorineko/midorineko.github.io/contents/cannabis_pics?ref=master')
+		   $http.get('https://api.github.com/repos/midorineko/midorineko.github.io/contents/cannabis_pics/sherbet_gelato?ref=master')
 		       .success(function(data, status, headers, config) {
 		           if (data && status === 200) {
 					$scope.image_array = data.map(function(obj){
