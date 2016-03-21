@@ -6,7 +6,7 @@
 }
 
 .square{
-  background: pink;
+  /*background: pink;*/
   border: solid 1px green;
   height: 300px;
 }
@@ -21,9 +21,26 @@
 
 .bubble {
   width: 200px !important;
-  height: 100px;
-  background: blue;
+  height: 70px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   -moz-border-radius: 100px / 50px;
   -webkit-border-radius: 100px / 50px;
   border-radius: 100px / 50px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.square2{
+  display: none;
+}
+
+.square:hover .bubble{
+  display: none;
+}
+
+.square:hover .square2{
+  display: block;
 }
