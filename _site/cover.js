@@ -1,4 +1,4 @@
-  var app = angular.module('cannabisApp', ['ngRoute']);
+  var app = angular.module('coverApp', ['ngRoute']);
 
 
   app.config(function($routeProvider) {
