@@ -6,8 +6,6 @@
 }
 
 .square{
-  /*background: pink;*/
-  border: solid 1px green;
   height: 300px;
   text-decoration: none;
 }
@@ -43,7 +41,12 @@
 }
 
 .square:hover .bubble{
-  display: none;
+  transform: translateY(-0%);
+  border-radius: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  top: 0%;
 }
 
 .square:hover .square2{
@@ -54,4 +57,8 @@
   color: green;
   text-align: center;
   font-size: 20px;
+}
+
+.square_info{
+  font-size: 14px;
 }
