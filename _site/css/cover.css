@@ -30,6 +30,8 @@
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+   -webkit-transition: top 1s, border-radius 1s; /* Safari */
+  transition: top 1s, border-radius 1s;
 }
 
 .square:hover{
@@ -62,4 +64,8 @@
 
 .square_info{
   font-size: 14px;
+}
+
+.delete{
+  display: none;
 }
