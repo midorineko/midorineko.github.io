@@ -1,3 +1,13 @@
+body, html {
+    min-height: 100% !important;
+    height: 100% !important;
+}
+
+#main_vert_center{
+   position: relative;
+    top: 5%;
+}
+
 #hey_there{
   height: 20%;
   color: red;
@@ -19,7 +29,7 @@
 }
 
 .bubble {
-  width: 200px !important;
+  width: 80%;
   height: 70px;
   display: block;
   margin-left: auto;
@@ -30,12 +40,14 @@
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-   -webkit-transition: top 1s, border-radius 1s; /* Safari */
+  -webkit-transition: top 1s, border-radius 1s; /* Safari */
   transition: top 1s, border-radius 1s;
 }
 
 .square:hover{
   text-decoration: none;
+  min-height: 300px;
+  z-index: 99;
 }
 
 .square2{
@@ -43,13 +55,14 @@
 }
 
 .square:hover .bubble{
-  min-width: 80% !important;
+  min-width: 80%;
   transform: translateY(-0%);
   border-radius: 1px;
   margin-left: auto;
   margin-right: auto;
   width: auto;
   top: 0%;
+  z-index: 90;
 }
 
 .square:hover .square2{
