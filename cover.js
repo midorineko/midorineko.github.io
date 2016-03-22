@@ -8,9 +8,9 @@
 				templateUrl : 'pages/home.html',
 				controller  : 'homeCtrl'
 			})
-		  .when('/watering', {
-				templateUrl : 'pages/watering.html',
-				controller  : 'wateringCtrl'
+		  .when('/resume', {
+				templateUrl : 'pages/resume/1.html',
+				controller  : 'resumeCtrl'
 			})
 			.otherwise('/');
 	});
@@ -19,7 +19,7 @@
 
 	  $scope.menu = [
 	    {label:'Home', route:'/'},
-	    {label:'Watering', route:'/watering'}
+	    {label:'Resume', route:'/resume'}
 	   ]
 
 	  $scope.menuActive = '/';
@@ -36,50 +36,6 @@
 	});
 
 
-	app.controller('wateringCtrl', function($scope, $http) {
-		// https://docs.google.com/spreadsheets/d/1xlOorpivOmFpEcWvCKn_rF9yRMGUNEB9JaIE4-ZUtAU/edit#gid=0
-		var url = 'https://spreadsheets.google.com/feeds/list/1xlOorpivOmFpEcWvCKn_rF9yRMGUNEB9JaIE4-ZUtAU/od6/public/values?alt=json'
-		var parse = function(entry) {
-		  // console.log(entry);
-		  var box = entry['gsx$box']['$t'];
-		  var calmg = entry['gsx$calmg']['$t'];
-		  var nutes = entry['gsx$nutepercent']['$t'];
-		  var date = entry['gsx$date']['$t'];
-		  var hourWater = entry['gsx$hourwatermilitary']['$t'];
-		  var waterGallon = entry['gsx$water12gallon']['$t'];
-		  var hoursLightOn = entry['gsx$hourslighton']['$t'];
-		  var extra = entry['gsx$extra']['$t'];
-		  var issues = entry['gsx$issues']['$t'];
-		    if (nutes != 'none'){
-		  	nutes = eval(nutes).join(", ")
-		  }
-		  if (extra != 'none'){
-		  	extra = eval(extra).join(", ")
-		  }
-		  veep = {
-		    box: box,
-		    calmg: calmg,
-		    nutes: nutes,
-		    date: date,
-		    hourWater: hourWater,
-		    waterGallon: waterGallon,
-		    hoursLightOn: hoursLightOn,
-		    extra: extra,
-		    issues: issues,
-		    url: url
-		  };
-		  console.log(veep)
-		  return veep
-		}
-		$http.get(url)
-		.success(function(response) {
-		  var entries = response['feed']['entry'];
-		  $scope.parsedWateringSheet = [];
-		  for (var key in entries) {
-		    var content = entries[key];
-		    $scope.parsedWateringSheet.push(parse(content));
-		  }
-		});
+	app.controller('resumeCtrl', function($scope, $http) {
 
-		$scope.message = 'This will contain a watering schedule.';
 	});
