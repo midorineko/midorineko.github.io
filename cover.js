@@ -9,7 +9,7 @@
 				controller  : 'homeCtrl'
 			})
 		  .when('/resume', {
-				templateUrl : 'pages/resume/1.html',
+				templateUrl : 'pages/resume.html',
 				controller  : 'resumeCtrl'
 			})
 			.otherwise('/');
