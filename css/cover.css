@@ -20,7 +20,7 @@ body{
 
 @media (max-height: 760px) {
   #main_vert_center {
-    top: auto;
+    top: 20%;
     transform: translateY(-15%);
   }
 }
@@ -45,6 +45,12 @@ body{
 #square_bottom{
   padding-top: 400px;
   height: 33%;
+}
+
+@media (max-width: 750px) {
+  #square_bottom {
+    padding-top: 0;
+  }
 }
 
 .bubble {
