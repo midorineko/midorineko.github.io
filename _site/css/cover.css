@@ -14,8 +14,21 @@ body{
 
 #main_vert_center{
   position: relative;
-    top: 50%;
-    transform:      translateY(-60%);
+  top: 50%;
+  transform:      translateY(-60%);
+}
+
+@media (max-height: 760px) {
+  #main_vert_center {
+    top: auto;
+    transform: translateY(-15%);
+  }
+}
+
+@media (max-height: 500px) {
+  #main_vert_center {
+    transform: auto;
+  }
 }
 
 .square{
