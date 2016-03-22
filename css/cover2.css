@@ -18,19 +18,6 @@ body{
   transform: translateY(-0%);
 }
 
-/*@media (max-height: 760px) {
-  #main_vert_center {
-    top: 20%;
-    transform: translateY(-15%);
-  }
-}
-
-@media (max-height: 500px) {
-  #main_vert_center {
-    transform: auto;
-  }
-}*/
-
 .square{
   height: 300px;
   text-decoration: none;
