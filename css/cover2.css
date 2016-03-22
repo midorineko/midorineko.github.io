@@ -117,8 +117,13 @@ body{
   border: solid 1px #B1D978;
 }
 
-.navbar-cover a:hover, .navbar-cover a:focus{
+.navbar-cover a:hover{
   background-color: transparent !important;
   border-radius: 100px / 70px;
   border: solid 1px #B1D978;
+}
+
+.navbar-cover a:focus{
+  background-color: transparent !important;
+  border: solid 1px auto;
 }
