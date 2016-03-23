@@ -14,12 +14,12 @@ body{
 
 #main_vert_center{
     position: absolute;
-    top: 20%;
+    top: 16%;
 }
 
 @media (min-height: 1300px) {
   #main_vert_center {
-    top: 28%;
+    top: 25%;
   }
 }
 
