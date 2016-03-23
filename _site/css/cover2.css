@@ -13,9 +13,20 @@ body{
 }
 
 #main_vert_center{
-  position: relative;
-  top: 50%;
-  transform: translateY(0%);
+    position: absolute;
+    top: 12%;
+}
+
+@media (min-height: 1200px) {
+  #main_vert_center {
+    top: 22%;
+  }
+}
+
+@media (max-width: 750px) {
+  #square_bottom {
+    padding-top: 0;
+  }
 }
 
 .square{
@@ -24,7 +35,6 @@ body{
 }
 
 #square_top{
-  position: relative;
   top: -20px;
   height: 33%;
 }
