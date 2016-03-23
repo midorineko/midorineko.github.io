@@ -13,8 +13,8 @@ body{
 }
 
 #main_vert_center{
-/*    position: absolute;
-    top: 12%;*/
+    position: fixed;
+    top: 20%;
 }
 
 .square{
@@ -29,8 +29,6 @@ body{
 }
 
 #square_bottom{
-  position: relative;
-  top: 130px;
   height: 33%;
 }
 
