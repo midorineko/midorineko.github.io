@@ -25,7 +25,7 @@ body{
 
 @media (max-height: 750px) {
   #main_vert_center {
-    position: auto;
+    top: auto;
   }
 }
 
