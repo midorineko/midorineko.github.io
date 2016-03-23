@@ -29,7 +29,8 @@ body{
 }
 
 #square_bottom{
-  padding-top: 400px;
+  position: relative;
+  top: 130px;
   height: 33%;
 }
 
