@@ -58,7 +58,7 @@
 		    return new Array(num);
 		}
 		$scope.image_array = [];
-		   $http.get('https://github.com/midorineko/midorineko.github.io/blob/master/cannabis/cannabis_pics/sherbet_gelato?ref=master')
+		   $http.get('https://api.github.com/repos/midorineko/midorineko.github.io/contents/cannabis/cannabis_pics/sherbet_gelato?ref=master')
 		       .success(function(data, status, headers, config) {
 		           if (data && status === 200) {
 					$scope.image_array = data.map(function(obj){
@@ -78,14 +78,12 @@
 		    return new Array(num);
 		}
 		$scope.image_array = [];
-		   $http.get('https://github.com/midorineko/midorineko.github.io/blob/master/cannabis/cannabis_pics/blackjack_bubbakush?ref=master')
+		   $http.get('https://api.github.com/repos/midorineko/midorineko.github.io/contents/cannabis/cannabis_pics/blackjack_bubbakush?ref=master')
 		       .success(function(data, status, headers, config) {
 		           if (data && status === 200) {
 					$scope.image_array = data.map(function(obj){
- 						return parseInt(obj["name"]);
+ 						return obj["name"];
 					});
-					$scope.image_array.sort(function(a,b){return a - b}).reverse();
-					console.log($scope.image_array);
 		           }
 		       })
 		       .error(function(data, status) {
@@ -100,7 +98,7 @@
 		    return new Array(num);
 		}
 		$scope.image_array = [];
-		   $http.get('https://github.com/midorineko/midorineko.github.io/blob/master/cannabis/cannabis_pics/platinum_kosher?ref=master')
+		   $http.get('https://api.github.com/repos/midorineko/midorineko.github.io/contents/cannabis/cannabis_pics/platinum_kosher?ref=master')
 		       .success(function(data, status, headers, config) {
 		           if (data && status === 200) {
 					$scope.image_array = data.map(function(obj){
