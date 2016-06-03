@@ -32,7 +32,6 @@
 
 	app.controller('homeCtrl', function($scope) {
 
-		$scope.message = 'Mr. CatNaps loves cannabis!';
 	});
 
 
