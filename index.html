@@ -26,20 +26,17 @@
 
 </head>
 
-
+<div ng-controller="mainCtrl" ng-class="menuActive != '/bland' ? 'space' : 'grey'">
 <body>
-
 <div class="page-content">
     <div class="container">
         <article class="post">
-
-        <div ng-controller="mainCtrl">
-            <nav class="navbar navbar-cover">
+            <nav class="navbar" ng-class="menuActive != '/bland' ? 'navbar-cover' : 'bland-navbar-cover'">
                     <ul class="nav navbar-nav navbar-right">
-                        <li ng-repeat="item in menu" ng-class="{active: item.route == menuActive }"><a class="fly" href="#{{item.route}}">{{item.label}}</a>
+                        <li ng-repeat="item in menu" ng-class="{active: item.route == menuActive }"><a ng-class="menuActive != '/bland' ? 'fly' : 'bland-fly'" href="#{{item.route}}">{{item.label}}</a>
                         </li>
                         <li>
-                            <a href="mailto:steven.inouye91@gmail.com?subject=We have a position for you!" class="fly">Email Me</a>
+                            <a href="mailto:steven.inouye91@gmail.com?subject=We have a position for you!" ng-class="menuActive != '/bland' ? 'fly' : 'bland-fly'">Email Me</a>
                         </li>
                     </ul>
             </nav>
@@ -49,7 +46,6 @@
                 <div ng-view></div>
 
             </div>
-        </div>
 
         </article>
 
@@ -57,5 +53,6 @@
 </div>
 
 </body>
+</div> 
 
 </html>

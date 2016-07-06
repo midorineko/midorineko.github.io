@@ -12,13 +12,18 @@
 				templateUrl : 'pages/resume.html',
 				controller  : 'resumeCtrl'
 			})
+		    .when('/bland', {
+		  		templateUrl : 'pages/home_bland.html',
+		  		controller  : 'blandCtrl'
+		  	})
 			.otherwise('/');
 	});
 
-	app.controller('mainCtrl', function($scope, $rootScope, $location) {
+	app.controller('mainCtrl', function($scope, $rootScope, $location, $route) {
 
 	  $scope.menu = [
 	    {label:'Home', route:'/'},
+	    {label:'Home Bland', route:'/bland'},
 	    {label:'Resume', route:'/resume'}
 	   ]
 
@@ -26,11 +31,16 @@
 
 	  $rootScope.$on('$routeChangeSuccess', function(e, curr, prev) {
        $scope.menuActive = $location.path();
-    });
+       console.log($scope.menuActive)
+      });
 
 	});
 
 	app.controller('homeCtrl', function($scope) {
+
+	});
+
+	app.controller('blandCtrl', function($scope) {
 
 	});
 

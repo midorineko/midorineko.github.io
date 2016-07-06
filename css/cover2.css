@@ -2,10 +2,19 @@ body, html {
     height: 100% !important;
 }
 
-body{
+.space{
     background-image: url(../assets/galaxy.jpg);
     /*background-repeat: no-repeat;*/
     background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.grey{
+  background-color: #eae3d3;
+      background-position: center;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -136,4 +145,30 @@ body{
 .navbar-cover a:focus{
   background-color: transparent !important;
   border: solid 1px auto;
+}
+
+.bland-navbar-cover{
+  background-color: black !important;
+  color: red !important;
+}
+
+.bland-navbar-cover a:focus{
+  background-color: #21B6A8  !important;
+}
+
+.bland-navbar-cover .active{
+  background-color: #21B6A8  !important;
+}
+
+.bland-navbar-cover a:hover{
+    background-color: #21B6A8  !important;
+}
+
+.bland-navbar-cover a:focus{
+    background-color: #21B6A8  !important;
+}
+
+.bland-fly{
+  color: white !important;
+  font-weight: 400;
 }
