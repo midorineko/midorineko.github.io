@@ -12,9 +12,9 @@
 				templateUrl : 'pages/resume.html',
 				controller  : 'resumeCtrl'
 			})
-		    .when('/bland', {
-		  		templateUrl : 'pages/home_bland.html',
-		  		controller  : 'blandCtrl'
+		    .when('/clean', {
+		  		templateUrl : 'pages/clean.html',
+		  		controller  : 'cleanCtrl'
 		  	})
 			.otherwise('/');
 	});
@@ -23,7 +23,7 @@
 
 	  $scope.menu = [
 	    {label:'Home', route:'/'},
-	    {label:'Home Bland', route:'/bland'},
+	    {label:'Clean Website', route:'/clean'},
 	    {label:'Resume', route:'/resume'}
 	   ]
 
@@ -40,11 +40,14 @@
 
 	});
 
-	app.controller('blandCtrl', function($scope) {
-
+	app.controller('cleanCtrl', function($scope) {
+		var url = "http://www.steveninouye.me";
+		window.location = url;
 	});
 
 
-	app.controller('resumeCtrl', function($scope, $http) {
 
+	app.controller('resumeCtrl', function($scope, $http) {
+		var url = "https://docs.google.com/document/d/1lsEeOKXlhtyV2OkoAM0Z-um6U5dElweBuim3LFREOj0/edit?usp=sharing";
+		window.location = url;
 	});

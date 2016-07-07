@@ -172,3 +172,11 @@ body, html {
   color: white !important;
   font-weight: 400;
 }
+
+.about{
+  margin: 0;
+  color: #F3EFE0;
+  padding: 20px;
+  width: 100%;
+  background-color: #217C7E;
+}
