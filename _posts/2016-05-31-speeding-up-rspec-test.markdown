@@ -13,7 +13,7 @@ I quickly completed this task by uploading a minimum of 9 feature tests per area
 
 The resolution:
 
-Test the happy path for the feautre. If you are testing if a feature if able to update and only admins can update, test if an admin can update in the feature test. Remove tests that show multiple users being able to access a feature or multiple users not being able to access a feature. These tests will all be done in the policies spec.
+Test the happy path for the feature. If you are testing if a feature if able to update and only admins can update, test if an admin can update in the feature test. Remove tests that show multiple users being able to access a feature or multiple users not being able to access a feature. These tests will all be done in the policies spec.
 
 
 Policy spec is made to test how different users are able to interact with methods. So a Steward, Admin, and User can be tested against a method and we can see if they are permitted or not.
